@@ -3,144 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Currículo de Rondinelle Felipe Diogenes Nery">
     <title>Currículo - Rondinelle Felipe Diogenes Nery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            margin: 20px;
+            text-align: center; /* Centraliza o texto */
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77abff 3px solid;
-        }
-        header h1 {
+
+        h2 {
             text-align: center;
-            text-transform: uppercase;
-            margin: 0;
+            margin-bottom: 20px;
         }
+
+        .section {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            display: inline-block;
+            width: 80%; /* Define uma largura para que os blocos fiquem centralizados */
+            text-align: left; /* Alinha o conteúdo das seções à esquerda */
+        }
+
+        .section-header {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .section-content {
+            display: none; /* Inicialmente oculto */
+            padding: 10px;
+            background-color: white;
+        }
+
+        .active + .section-content {
+            display: block; /* Mostra o conteúdo quando a classe 'active' é ativada */
+        }
+
+        .section:hover {
+            background-color: #e6e6e6;
+        }
+
+        /* Estilo para a foto */
         .photo {
+            overflow: hidden;
             text-align: center;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
+
         .photo img {
-            border-radius: 50%;
             width: 150px;
             height: 150px;
-            object-fit: cover;
+            border-radius: 50%; /* Torna a imagem redonda */
+            border: 2px solid #ccc; /* Adiciona uma borda à foto */
+            -webkit-transition: -webkit-transform .5s ease;
+            transition: transform .5s ease;
         }
-        section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #77abff;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            background: #f4f4f4;
-            margin: 5px 0;
-            padding: 10px;
-            border-left: 5px solid #77abff;
-        }
-        .instagram {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .instagram a {
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .instagram a:hover {
-            color: #77abff;
-        }
+        .photo:hover img{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+}
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Currículo - Rondinelle Felipe Diogenes Nery</h1>
-    </header>
+    <h2>Currículo - Rondinelle Nery</h2>
 
-    <div class="container">
-        <div class="photo">
-            <!-- Substitua 'foto.jpg' pelo caminho para sua foto -->
-            <img src="http://127.0.0.1:5500/images/rondinelle_nery.jpeg"  alt="Foto de Rondinelle Felipe Diogenes Nery">
-        </div>
+    <!-- Campo para a foto -->
+    <div class="photo">
+        <img src="http://127.0.0.1:5500/images/rondinelle_nery.jpeg" alt="Foto de Rondinelle Nery">
+    </div>
 
-        <section id="dados-pessoais">
-            <h2>Dados Pessoais</h2>
-            <ul>
-                <li><strong>Nome:</strong> Rondinelle Felipe Diogenes Nery</li>
-                <li><strong>Idade:</strong> 39 anos</li>
-                <li><strong>Estado Civil:</strong> Casado</li>
-                <li><strong>Telefone:</strong> (85) 98163-6032</li>
-                <li><strong>Email:</strong> rondipaper@gmail.com</li>
-                <li><strong>Localização:</strong> Fortaleza, CE</li>
-            </ul>
-        </section>
-
-        <section id="formacao">
-            <h2>Formação</h2>
-            <ul>
-                <li>Análise e Desenvolvimento de Sistemas - Faculdade CDL</li>
-                <li>Formação em Marketing</li>
-            </ul>
-        </section>
-
-        <section id="experiencia">
-            <h2>Experiência Profissional</h2>
-            <ul>
-                <li><strong>Casa Magalhães:</strong> 11 anos (Analista, Instrutor de EAD, Atendimento SysPDV e VarejoFácil)</li>
-                <li>15 anos de experiência em automação comercial</li>
-                <li>Excelentes habilidades de trato com o cliente e profundo conhecimento em regras de negócio</li>
-            </ul>
-        </section>
-
-        <section id="competencias">
-            <h2>Competências</h2>
-            <ul>
-                <li>Desenvolvimento de Software (C++, JavaScript, Python, HTML, CSS)</li>
-                <li>Marketing e automação comercial</li>
-            </ul>
-        </section>
-
-        <section id="projetos">
-            <h2>Projetos Recentes</h2>
-            <ul>
-                <li>Desenvolvimento de projetos em C++</li>
-                <li>Estudo de desenvolvimento web (HTML, CSS, JavaScript)</li>
-            </ul>
-        </section>
-
-        <section id="objetivo">
-            <h2>Objetivo</h2>
-            <p>Busco uma oportunidade para aplicar minhas habilidades em desenvolvimento de software e automação comercial, contribuindo para o crescimento da empresa e meu desenvolvimento profissional.</p>
-        </section>
-
-        <div class="instagram">
-            <p>Visite meu <a href="https://www.instagram.com/rondi3d" target="_blank">perfil pessoal no Instagram</a>, onde compartilho minhas criações de arte 3D feitas no meu tempo livre.</p>
+    <!-- Seção de Dados Pessoais -->
+    <div class="section">
+        <div class="section-header">Dados Pessoais</div>
+        <div class="section-content">
+            <p><strong>Nome:</strong> Rondinelle Felipe Diogenes Nery</p>
+            <p><strong>Idade:</strong> 39 anos</p>
+            <p><strong>Email:</strong> rondipaper@gmail.com</p>
+            <p><strong>Telefone:</strong> 85981636032</p>
+            <p><strong>Localização:</strong> Fortaleza, CE</p>
         </div>
     </div>
+
+    <!-- Seção de Experiência Profissional -->
+    <div class="section">
+        <div class="section-header">Experiência Profissional</div>
+        <div class="section-content">
+            <p><strong>Empresa:</strong> Casa Magalhães</p>
+            <p><strong>Cargo:</strong> Atendimento SysPDV e VarejoFácil</p>
+            <p><strong>Período:</strong> 11 anos (até julho de 2024)</p>
+        </div>
+    </div>
+
+    <!-- Seção de Educação -->
+    <div class="section">
+        <div class="section-header">Educação</div>
+        <div class="section-content">
+            <p><strong>Faculdade:</strong> Faculdade CDL</p>
+            <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+            <p><strong>Semestre Atual:</strong> 2º semestre</p>
+        </div>
+    </div>
+
+    <!-- Seção de Habilidades -->
+    <div class="section">
+        <div class="section-header">Habilidades</div>
+        <div class="section-content">
+            <ul>
+                <li>Desenvolvimento em C++, JavaScript, Python, HTML e CSS</li>
+                <li>Marketing e Automação Comercial</li>
+                <li>Conhecimento técnico e prático sobre Impressão 3D</li>
+                <li>Software Fusion 360 - Modelagem 3D técnica</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para alternar o conteúdo ao clicar
+        var headers = document.getElementsByClassName("section-header");
+
+        for (var i = 0; i < headers.length; i++) {
+            headers[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
