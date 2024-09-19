@@ -22,8 +22,10 @@
             padding: 15px;
             background-color: #f9f9f9;
             display: inline-block;
-            width: 80%; /* Define uma largura para que os blocos fiquem centralizados */
+            width: 50%; /* Reduz a largura das seções para 50% */
             text-align: left; /* Alinha o conteúdo das seções à esquerda */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+            border-radius: 5px; /* Adiciona bordas arredondadas */
         }
 
         .section-header {
@@ -50,37 +52,84 @@
             background-color: #e6e6e6;
         }
 
-        /* Estilo para a foto */
         .photo {
             overflow: hidden;
-            text-align: center;
+            text-align: center; /* Centraliza a foto */
             margin-bottom: 20px;
         }
 
         .photo img {
-            width: 150px;
-            height: 150px;
+            width: 100px; /* Diminuindo a largura da imagem para 100px */
+            height: 100px; /* Diminuindo a altura da imagem para 100px */
             border-radius: 50%; /* Torna a imagem redonda */
             border: 2px solid #ccc; /* Adiciona uma borda à foto */
             -webkit-transition: -webkit-transform .5s ease;
             transition: transform .5s ease;
         }
-        .photo:hover img{
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-}
+        .photo:hover img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .export-button {
+            margin: 30px auto; /* Centraliza o botão e adiciona margem */
+            padding: 15px 30px; /* Aumenta o tamanho do botão */
+            font-size: 20px; /* Aumenta o tamanho da fonte */
+            color: #fff;
+            background-color: #3498DB; /* Azul claro */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; /* Faz o botão ocupar uma linha inteira */
+        }
+
+        .export-button:hover {
+            background-color: #2980B9; /* Azul escuro ao passar o mouse */
+        }
+
+        /* Estilos específicos para impressão */
+        @media print {
+            body {
+                margin: 0; /* Remove margens */
+                padding: 10px; /* Adiciona um pouco de padding */
+                font-size: 10px; /* Diminui o tamanho da fonte */
+            }
+
+            .section {
+                width: 100%; /* Faz as seções ocuparem toda a largura */
+                padding: 8px; /* Diminui o padding das seções */
+                border: none; /* Remove a borda durante a impressão */
+                box-shadow: none; /* Remove a sombra durante a impressão */
+            }
+
+            .section-header {
+                border-bottom: none; /* Remove a borda inferior do cabeçalho */
+            }
+
+            .export-button {
+                display: none; /* Esconde o botão durante a impressão */
+            }
+
+            .photo {
+                text-align: center; /* Centraliza a foto na impressão */
+                margin-bottom: 20px; /* Adiciona margem inferior */
+            }
+
+            .photo img {
+                width: 70px; /* Diminuindo a largura da imagem para 70px na impressão */
+                height: 70px; /* Diminuindo a altura da imagem para 70px na impressão */
+            }
+        }
     </style>
 </head>
 <body>
 
     <h2>Currículo</h2>
 
-    <!-- Campo para a foto -->
     <div class="photo">
         <img src="http://127.0.0.1:5500/images/rondinelle_nery.jpeg" alt="Foto de Rondinelle Nery">
     </div>
 
-    <!-- Seção de Dados Pessoais -->
     <div class="section">
         <div class="section-header">Dados Pessoais</div>
         <div class="section-content">
@@ -92,7 +141,6 @@
         </div>
     </div>
 
-    <!-- Seção de Experiência Profissional -->
     <div class="section">
         <div class="section-header">Experiência Profissional</div>
         <div class="section-content">
@@ -102,32 +150,30 @@
             <p>--------------------------------------------</p>
             <p><strong>Empresa:</strong> Alfa Automação Comercial</p>
             <p><strong>Cargo:</strong> Atendimento ao cliente e Supervisão</p>
-            <p><strong>Período:</strong> 4 anos e 10 meses (março/2008 - maio/2013 )</p>
+            <p><strong>Período:</strong> 4 anos e 10 meses (março/2008 - maio/2013)</p>
         </div>
     </div>
 
-    <!-- Seção de Educação -->
     <div class="section">
         <div class="section-header">Educação</div>
         <div class="section-content">
             <p><strong>Faculdade:</strong> Faculdade CDL</p>
-            <p><strong>Cursando</strong> Análise e Desenvolvimento de Sistemas</p>
+            <p><strong>Cursando:</strong> Análise e Desenvolvimento de Sistemas</p>
             <p><strong>Semestre Atual:</strong> 2º semestre</p>
-            <p><strong>Previsão de Conclusão:</strong>2026/1</p>
+            <p><strong>Previsão de Conclusão:</strong> 2026/1</p>
             <p>--------------------------------------------</p>
             <p><strong>Faculdade:</strong> Faculdade CDL</p>
-            <p><strong>Curso</strong> Marketing</p>
-            <p><strong>Concluído 2019</strong></p>
+            <p><strong>Curso:</strong> Marketing</p>
+            <p><strong>Concluído:</strong> 2019</p>
         </div>
     </div>
 
-    <!-- Seção de Habilidades -->
     <div class="section">
         <div class="section-header">Habilidades</div>
         <div class="section-content">
             <ul>
                 <li>Estudo em Desenvolvimento: C++, JavaScript, Python, HTML e CSS.</li>
-                <li>Dominio em Mysql e banco de dados.</li>
+                <li>Domínio em MySQL e banco de dados.</li>
                 <li>Marketing.</li>
                 <li>Automação Comercial (15 anos de experiência).</li>
                 <li>Conhecimento técnico e prático sobre Impressão 3D.</li>
@@ -137,24 +183,36 @@
         </div>
     </div>
 
-    <!-- Seção de O que busca -->
-        <div class="section">
-            <div class="section-header">O que eu busco?</div>
-            <div class="section-content">
-                <ul>
-                    <li>Uma empresa com a cultura de crescimento constante, harmonioza e busca a valorização do profissional constantemente.</li>
-                    <li>A função de programador junior/estágio.</li>
-                    <li>Aprender mais a cada dia com meus estudos e a troca de experiência com meus pares e gestores.</li>
-                    <li>Atender as necessidades exigidas e impostas a mim para alcançar meu crescimento constante.</li>
-                    <li>Compartilhar meu conhecimento, aprender novos processos e diretrizes.</li>
-                </ul>
-            </div>
+    <div class="section">
+        <div class="section-header">O que eu busco?</div>
+        <div class="section-content">
+            <ul>
+                <li>Uma empresa com a cultura de crescimento constante, harmoniosa e busca a valorização do profissional constantemente.</li>
+                <li>A função de programador junior/estágio.</li>
+                <li>Aprender mais a cada dia com meus estudos e a troca de experiência com meus pares e gestores.</li>
+                <li>Atender as necessidades exigidas e impostas a mim para alcançar meu crescimento constante.</li>
+                <li>Compartilhar meu conhecimento, aprender novos processos e diretrizes.</li>
+            </ul>
         </div>
+    </div>
+
+    <button class="export-button" onclick="printResume()">Exportar e Imprimir</button>
 
     <script>
-        // JavaScript para alternar o conteúdo ao clicar
-        var headers = document.getElementsByClassName("section-header");
+        function printResume() {
+            const sections = document.getElementsByClassName('section-content');
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'block'; // Exibir conteúdo
+            }
+            window.print();
+            setTimeout(() => {
+                for (let i = 0; i < sections.length; i++) {
+                    sections[i].style.display = 'none'; // Ocultar conteúdo novamente
+                }
+            }, 500); // Tempo para garantir que a impressão tenha sido acionada
+        }
 
+        var headers = document.getElementsByClassName("section-header");
         for (var i = 0; i < headers.length; i++) {
             headers[i].addEventListener("click", function () {
                 this.classList.toggle("active");
